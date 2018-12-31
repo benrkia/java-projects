@@ -1,0 +1,24 @@
+.list-view {
+    -fx-background-color: #2196F3;
+    -fx-pref-height: 425;
+}
+
+.list-view .scroll-bar:vertical, .list-view .scroll-bar:horizontal {
+    -fx-scale-x: 0;
+    -fx-padding: -10;
+}
+
+.list-cell, .home {
+    -fx-background-color: #2196F3;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-family: AdobeArabic-Regular;
+    -fx-font-size: 18;
+    -fx-pref-height: 50;
+    -fx-cursor: hand;
+}
+
+.list-cell:hover, .list-cell:pressed, .list-cell:selected,
+.home:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+}

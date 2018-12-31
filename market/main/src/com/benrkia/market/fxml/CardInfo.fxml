@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTextField focusColor="#2196f3" labelFloat="true" promptText="Street">
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" top="30.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </JFXTextField>
+      <JFXTextField focusColor="#2196f3" labelFloat="true" layoutX="20.0" layoutY="30.0" promptText="Postal Code">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" top="30.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </JFXTextField>
+      <AnchorPane>
+         <children>
+            <JFXComboBox focusColor="#2196f3" promptText="Country" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="30.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </JFXComboBox>
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" top="30.0" />
+         </VBox.margin>
+      </AnchorPane>
+      <AnchorPane layoutX="20.0" layoutY="158.0">
+         <children>
+            <JFXComboBox focusColor="#2196f3" promptText="City" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="30.0" />
+               </VBox.margin>
+            </JFXComboBox>
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" top="30.0" />
+         </VBox.margin>
+      </AnchorPane>
+      <JFXCheckBox checkedColor="#2196f3" text="Use my address">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" top="30.0" />
+         </VBox.margin>
+      </JFXCheckBox>
+      <HBox alignment="BOTTOM_RIGHT">
+         <children>
+            <JFXButton style="-fx-background-color: #5a5a5a;" text="Close" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton layoutX="10.0" layoutY="10.0" style="-fx-background-color: #2196F3;" text="Submit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.benrkia.market.controller.Dashboard">
+   <children>
+      <VBox style="-fx-background-color: #2196F3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="720.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="113.0" prefWidth="325.0" style="-fx-background-color: rgba(0, 0, 0, 0.1);">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="69.0" fitWidth="69.0" layoutX="50.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="119.0" layoutY="44.0" text="THE MARKET" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Separator prefWidth="200.0">
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </Separator>
+            <Pane fx:id="homePane">
+               <children>
+                  <Label fx:id="homeButton" prefWidth="300.0" styleClass="home" stylesheets="@../css/aside.css" text="Home" />
+               </children>
+            </Pane>
+            <JFXListView fx:id="categoryList" stylesheets="@../css/aside.css" />
+         </children>
+      </VBox>
+      <AnchorPane layoutX="987.0" layoutY="5.0" style="-fx-background-color: rgba(0, 0, 0, 0.1);" AnchorPane.bottomAnchor="530.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton onMouseClicked="#closeDashboard" ripplerFill="#2196f3" text="X" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <HBox layoutX="15.0" layoutY="18.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <JFXButton fx:id="username" ripplerFill="BLACK" style="-fx-background-color: #2196F3;" text="Benrkia Ilyasse" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="AdobeArabic-Regular" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="cart" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../assets/cart.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mainPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane>
+                     <children>
+                        <Label fx:id="newArrivalsLabel" layoutX="10.0" layoutY="10.0" text="New Arrivals">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="10.0" layoutY="35.0" prefHeight="13.0" prefWidth="700.0" />
+                     </children>
+                  </Pane>
+                  <JFXListView fx:id="newArrivals" orientation="HORIZONTAL" stylesheets="@../css/productList.css">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin></JFXListView>
+                  <Pane layoutX="10.0" layoutY="10.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="10.0" text="Top Saled">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="10.0" layoutY="35.0" prefHeight="13.0" prefWidth="700.0" />
+                     </children>
+                  </Pane>
+                  <JFXListView fx:id="topSaled" orientation="HORIZONTAL" stylesheets="@../css/productList.css">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin></JFXListView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="productPane" layoutX="10.0" layoutY="10.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <ImageView fx:id="productImage" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="115.0">
+               <image>
+                  <Image url="@../../../../../assets/product.jpg" />
+               </image>
+            </ImageView>
+            <VBox layoutX="423.0" layoutY="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="115.0">
+               <children>
+                  <Label fx:id="productName" text="Product Name">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextArea fx:id="productDesctiption" editable="false" focusColor="#405aa800" text="this is a short description of the product this is a short description of the product&#10;this is a short description of the product" unFocusColor="#4d4d4d00" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </JFXTextArea>
+                  <AnchorPane>
+                     <children>
+                        <VBox layoutX="230.0">
+                           <children>
+                              <Label fx:id="productPrice" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="151.0" text="\$0.00" textFill="RED" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="productTotalPrice" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" text="\$0.00" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <JFXButton fx:id="productQuantityMinus" prefWidth="30.0" text="-" textFill="#2196f3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="productQuantity" alignment="CENTER" editable="false" focusColor="#2298f299" prefWidth="50.0" text="0" unFocusColor="#2196f3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="productQuantityPlus" layoutX="10.0" layoutY="10.0" prefWidth="30.0" text="+" textFill="#2196f3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <JFXButton fx:id="addToCart" style="-fx-background-color: #FFC107;" text="Add to cart" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="cartPane" layoutX="20.0" layoutY="20.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <VBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane AnchorPane.bottomAnchor="482.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="10.0" text="Your cart">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="10.0" layoutY="35.0" prefHeight="13.0" prefWidth="700.0" />
+                        <Label fx:id="cartTotalPrice" layoutX="616.0" layoutY="11.0" text="\$0.00" textFill="RED">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <AnchorPane>
+                     <children>
+                        <JFXButton fx:id="checkout" style="-fx-background-color: #FFC107;" text="Checkout" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <JFXListView fx:id="cartLineCmds" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="95.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
